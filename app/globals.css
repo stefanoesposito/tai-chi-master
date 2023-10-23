@@ -119,6 +119,7 @@ body {
     align-items: flex-start;
     gap: 12px;
     min-width: 350px;
+    max-width: 400px;
 }
 
 .userChat {
