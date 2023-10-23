@@ -147,3 +147,12 @@ body {
     padding: 8px 0;
     margin-top: 60px;
 }
+
+.madeBy {
+    color: white;
+    cursor: pointer;
+}
+
+.madeBy:hover {
+    text-decoration: none;
+}
