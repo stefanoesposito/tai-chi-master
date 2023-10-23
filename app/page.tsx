@@ -144,7 +144,7 @@ export default function Home() {
               <Image className={'cloud2'} src={cloud2} alt={'Il tuo senior dev'} width={50}
                      onClick={reloadPage}/>
             </div>
-            <p>Sono il tuo Senior dev… No, non mi disturbi</p>
+            <p>Sono Senior Dev Haiku… No, non mi disturbi</p>
             <div className={''}>
                 <ChatInput onSend={(input) => callApi(input)} disabled={loading}/>
             </div>
