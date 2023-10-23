@@ -118,6 +118,7 @@ body {
     flex-direction: column;
     align-items: flex-start;
     gap: 12px;
+    min-width: 350px;
 }
 
 .userChat {
