@@ -143,6 +143,12 @@ export default function Home() {
                        onClick={reloadPage}/>
                 <Image className={'cloud2'} src={cloud2} alt={'Il tuo senior dev'} width={50}
                        onClick={reloadPage}/>
+                <Image className={'cloud3'} src={cloud2} alt={'Il tuo senior dev'} width={50}
+                       onClick={reloadPage}/><Image className={'cloud2'} src={cloud2} alt={'Il tuo senior dev'} width={50}
+                                                    onClick={reloadPage}/>
+                <Image className={'cloud4'} src={cloud1} alt={'Il tuo senior dev'} width={50}
+                       onClick={reloadPage}/>
+
             </div>
             <p>Sono Senior Dev Haiku… no, non mi disturbi…</p>
             <div className={'messages'}>

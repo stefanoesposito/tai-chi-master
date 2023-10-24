@@ -51,17 +51,36 @@ body {
 
 .cloud1 {
     position: absolute;
-    top: 110px;
+    top: 100px;
     animation: moveLeft 3s ease-in-out infinite;
     z-index: 0;
 }
 
 .cloud2 {
     position: absolute;
-    top: 108px;
+    top: 102px;
     margin-left: 70px;
     animation: moveRight 5s ease-in-out infinite;
     z-index: 1;
+    opacity: 0.8;
+}
+
+.cloud3 {
+    position: absolute;
+    top: 30px;
+    margin-left: -8px;
+    animation: moveRight 6s ease-in-out infinite;
+    z-index: 0;
+    opacity: 0.6;
+}
+
+.cloud4 {
+    position: absolute;
+    top: 15px;
+    margin-left: 70px;
+    animation: moveRight 7s ease-in-out infinite;
+    z-index: 0;
+    opacity: 0.8;
 }
 
 .userPic {
