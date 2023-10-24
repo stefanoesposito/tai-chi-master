@@ -68,7 +68,6 @@ body {
 .cloud3 {
     position: absolute;
     top: 30px;
-    margin-left: -3px;
     animation: moveRight 6s ease-in-out infinite;
     z-index: 0;
     opacity: 0.8;
