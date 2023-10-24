@@ -68,12 +68,28 @@ body {
     opacity: .8;
 }
 
+.chatInputWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3px;
+    width: 100vw;
+    position: fixed;
+    padding: 20px 0;
+    height: 80px;
+    bottom: 0;
+    border-top: 1px solid #eaeaea;
+    background-color: white;
+}
+
 .inputContainer {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-bottom: 30px;
+    justify-content: center;
     width: 100%;
+    padding-top: 20px;
+    padding-bottom: 8px;
 }
 
 .chatInput {
@@ -98,7 +114,7 @@ body {
     border: none;
     border-radius: 0 8px 8px 0;
     cursor: pointer;
-    background-color: #ffb32b;
+    background-color: #76caea;
     color: white;
 }
 
@@ -111,6 +127,7 @@ body {
 .chat {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .messages {
@@ -120,6 +137,7 @@ body {
     gap: 12px;
     min-width: 350px;
     max-width: 400px;
+    margin-bottom: 180px;
 }
 
 .userChat {
@@ -131,11 +149,30 @@ body {
     margin: auto;
 }
 
+.userChatRight {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-items: center;
+    align-self: flex-end;
+    gap: 20px;
+    min-width: 95%;
+}
+
+.userChatText {
+    background-color: #f3f3f3;
+    color: #4d4d4d;
+    border-radius: 16px;
+    padding: 12px;
+    text-align: right;
+}
+
 .botChat {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    background-color: #dedede;
+    background-color: #76caea;
+    color: white;
     border-radius: 16px;
     padding: 12px;
 }
@@ -147,7 +184,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 12px 0;
-    margin-top: 60px;
+    margin-top: 4px;
 }
 
 .madeBy {

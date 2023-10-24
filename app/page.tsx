@@ -8,6 +8,7 @@ import yinYang from '../public/images/yinyang.svg'
 import useState from 'react-usestateref'
 import './globals.css'
 import {Send} from 'react-bootstrap-icons'
+import Footer from '@/app/components/Footer'
 
 enum Creator {
     Me = 0,
@@ -29,9 +30,9 @@ const ChatMessage = ({text, from}: MessageProps) => {
     return (
         <div className={'chat'}>
             {from === Creator.Me && (
-                <div className={'userChat'}>
+                <div className={'userChatRight'}>
                     <Image className={'userPic'} src={userPic} alt={'User'} width={40}/>
-                    <p className={'text-grey-700'}>{text}</p>
+                    <p className={'userChatText'}>{text}</p>
                 </div>
             )}
             {from === Creator.Bot && (
@@ -133,26 +134,27 @@ export default function Home() {
         }
     }
 
-    console.log(messages)
     return (
         <main className={'app'}>
             <div className={'masterContainer'}>
-              <Image className={'cloud1'} src={cloud1} alt={'Il tuo senior dev'} width={50}
-                     onClick={reloadPage}/>
+                <Image className={'cloud1'} src={cloud1} alt={'Il tuo senior dev'} width={50}
+                       onClick={reloadPage}/>
                 <Image className={'masterPic'} src={masterPic} alt={'Il tuo senior dev'} width={120}
                        onClick={reloadPage}/>
-              <Image className={'cloud2'} src={cloud2} alt={'Il tuo senior dev'} width={50}
-                     onClick={reloadPage}/>
+                <Image className={'cloud2'} src={cloud2} alt={'Il tuo senior dev'} width={50}
+                       onClick={reloadPage}/>
             </div>
-            <p>Sono Senior Dev Haiku… No, non mi disturbi</p>
-            <div className={''}>
-                <ChatInput onSend={(input) => callApi(input)} disabled={loading}/>
-            </div>
+            <p>Sono Senior Dev Haiku… no, non mi disturbi…</p>
             <div className={'messages'}>
                 {messages.map((msg: MessageProps) => (
                     <ChatMessage key={msg.key} text={msg.text} from={msg.from}/>
                 ))}
-                {messages.length === 0 && <p className={'text-center text-gray-400'}>I messaggi appariranno qui…</p>}
+                {messages.length === 0 &&
+                    <p className={'text-center text-gray-400'}>I messaggi appariranno qui…</p>}
+            </div>
+            <div className={'chatInputWrapper'}>
+                <ChatInput onSend={(input) => callApi(input)} disabled={loading}/>
+                <Footer/>
             </div>
         </main>
     )
