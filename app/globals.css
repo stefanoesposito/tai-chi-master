@@ -62,22 +62,22 @@ body {
     margin-left: 70px;
     animation: moveRight 5s ease-in-out infinite;
     z-index: 1;
-    opacity: 0.8;
+    opacity: 0.95;
 }
 
 .cloud3 {
     position: absolute;
     top: 30px;
-    margin-left: -8px;
+    margin-left: -3px;
     animation: moveRight 6s ease-in-out infinite;
     z-index: 0;
-    opacity: 0.6;
+    opacity: 0.8;
 }
 
 .cloud4 {
     position: absolute;
-    top: 15px;
-    margin-left: 70px;
+    top: 20px;
+    margin-left: 80px;
     animation: moveRight 7s ease-in-out infinite;
     z-index: 0;
     opacity: 0.8;
