@@ -87,6 +87,13 @@ body {
     opacity: .8;
 }
 
+.noChatText {
+    width: 100%;
+    text-align: center;
+    color: #a4a4a4;
+    line-height: 1.5;
+}
+
 .chatInputWrapper {
     display: flex;
     flex-direction: column;
