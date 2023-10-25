@@ -155,7 +155,7 @@ export default function Home() {
                     <ChatMessage key={msg.key} text={msg.text} from={msg.from}/>
                 ))}
                 {messages.length === 0 &&
-                    <p className={'noChatText'}>Fai domande tecniche a Senior Dev Haiku… <br/> Ti sorprenderà!</p>}
+                    <p className={'noChatText'}>Senior Dev Haiku spesso risponde in modi enigmatici… come fanno tutti gli sviluppatori senior… <br/><br/> Fagli delle domande tecniche… <br/>Ti sorprenderà!</p>}
             </div>
             <div className={'chatInputWrapper'}>
                 <ChatInput onSend={(input) => callApi(input)} disabled={loading}/>
