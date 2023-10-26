@@ -9,6 +9,7 @@ import useState from 'react-usestateref'
 import './globals.css'
 import {Send} from 'react-bootstrap-icons'
 import Footer from '@/app/components/Footer'
+import {useEffect} from 'react'
 
 enum Creator {
     Me = 0,
@@ -133,6 +134,15 @@ export default function Home() {
             console.log('Error')
         }
     }
+
+    useEffect(()=> {
+        setTimeout(() => {
+            window.scrollTo({
+                top: document.body.scrollHeight,
+                behavior: 'smooth'
+            })
+        }, 100)
+    }, [messages.length])
 
     return (
         <main className={'app'}>
