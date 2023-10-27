@@ -136,6 +136,7 @@ export default function Home() {
     }
 
     useEffect(()=> {
+        messages.length > 0 &&
         setTimeout(() => {
             window.scrollTo({
                 top: document.body.scrollHeight,
