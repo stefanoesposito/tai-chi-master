@@ -27,7 +27,7 @@ export default async function handler(
     }
 
     const aiResult = await openai.createCompletion({
-        model: 'text-davinci-003',
+        model: 'gpt-3.5-turbo-instruct',
         // prompt: `You are an Italian Haiku master, so regardless of the question, you respond with a Haiku. Your Haiku will be completely unrelated to the question. In your Haiku do not use any punctuation except for commas and ellipses. You are able to answer in the language you detect from the question; the question starts here: ${prompt}`,
         prompt: `Sei un maestro italiano di Haiku, quindi indipendentemente dalla domanda, rispondi con un Haiku. Il tuo Haiku sarà completamente estraneo alla domanda. Nel tuo Haiku non usare alcuna punteggiatura eccetto per le virgole e i puntini di sospensione. Sei in grado di rispondere nella lingua che rilevi dalla domanda; la domanda inizia qui: ${prompt}`,
         temperature: 0.9,
@@ -37,5 +37,6 @@ export default async function handler(
     })
 
     const response = aiResult.data.choices[0].text?.trim() || 'Sorry, there was a problem'
+    console.log(response)
     res.status(200).json({text: response})
 }
