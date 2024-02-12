@@ -43,11 +43,20 @@ body {
     display: flex;
 }
 
+.masterPic, .masterPicChat {
+    border-radius: 50%;
+}
+
 .masterPic{
     cursor: pointer;
-    animation: levitate 4s ease-in-out infinite;
-    z-index: 1;
+    width: 100px;
+    height: 100px;
 }
+
+.masterPicChat {
+    margin: 0 0 0 12px;
+}
+
 
 .cloud1 {
     position: absolute;
@@ -172,6 +181,11 @@ body {
     gap: 20px;
     min-width: 95%;
     margin: auto;
+    border-radius: 50%;
+}
+
+.userChatRight img {
+    margin: 0 12px 0 0;
 }
 
 .userChatRight {
@@ -185,8 +199,8 @@ body {
 }
 
 .userChatText {
-    background-color: #f3f3f3;
-    color: #4d4d4d;
+    background-color: #dfdfdf;
+    color: #000000;
     border-radius: 10px;
     padding: 12px;
     text-align: right;
@@ -196,10 +210,11 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    background-color: #76caea;
-    color: white;
+    background-color: #dfdfdf;
+    color: #000000;
     border-radius: 10px;
     padding: 12px;
+    margin: 0 12px 0 0;
 }
 
 .footer {

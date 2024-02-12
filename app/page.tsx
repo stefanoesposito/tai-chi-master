@@ -1,9 +1,7 @@
 'use client'
 import Image from 'next/image'
 import userPic from '../public/images/user.jpg'
-import masterPic from '../public/images/zen-haiku.png'
-import cloud1 from '../public/images/cloud1.png'
-import cloud2 from '../public/images/cloud2.png'
+import masterPic from '../public/images/tai-chi-master.jpg'
 import yinYang from '../public/images/yinyang.svg'
 import useState from 'react-usestateref'
 import './globals.css'
@@ -38,7 +36,7 @@ const ChatMessage = ({text, from}: MessageProps) => {
             )}
             {from === Creator.Bot && (
                 <div className={'userChat'}>
-                    <Image src={masterPic} alt={'Master'} width={40}/>
+                    <Image className={'masterPicChat'} src={masterPic} alt={'Master'} width={40}/>
                     <div className={'botChat'}>
                         {text.split('\n').map((line, index) => (
                             <span key={index}>
@@ -74,7 +72,7 @@ const ChatInput = ({onSend, disabled}: InputProps) => {
                 value={input}
                 onChange={(e: any) => setInput(e.target.value)}
                 className={disabled ? 'chatInputNoBorder' : 'chatInput'}
-                placeholder={disabled ? '...' : 'Dimmi…'}
+                placeholder={disabled ? '...' : 'Scrivi…'}
                 disabled={disabled}
                 onKeyDown={(e) => handleKeyDown(e)}
                 autoFocus={true}
@@ -148,25 +146,16 @@ export default function Home() {
     return (
         <main className={'app'}>
             <div className={'masterContainer'}>
-                <Image className={'cloud1'} src={cloud1} alt={'Il tuo senior dev'} width={50}
-                       onClick={reloadPage}/>
-                <Image className={'masterPic'} src={masterPic} alt={'Il tuo senior dev'} width={120}
-                       onClick={reloadPage}/>
-                <Image className={'cloud2'} src={cloud2} alt={'Il tuo senior dev'} width={50}
-                       onClick={reloadPage}/>
-                <Image className={'cloud3'} src={cloud2} alt={'Il tuo senior dev'} width={30}
-                       onClick={reloadPage}/>
-                <Image className={'cloud4'} src={cloud1} alt={'Il tuo senior dev'} width={35}
-                       onClick={reloadPage}/>
+                <Image className={'masterPic'} src={masterPic} alt={'Maestro del Soffio Celeste'} onClick={reloadPage} />
 
             </div>
-            <p>Sono Senior Dev Haiku… no, non mi disturbi…</p>
+            <p>Maestro del Soffio Celeste</p>
             <div className={'messages'}>
                 {messages.map((msg: MessageProps) => (
                     <ChatMessage key={msg.key} text={msg.text} from={msg.from}/>
                 ))}
                 {messages.length === 0 &&
-                    <p className={'noChatText'}>Senior Dev Haiku spesso risponde in modi enigmatici… come fanno tutti gli sviluppatori senior… <br/><br/> Fagli delle domande tecniche… <br/>Ti sorprenderà!</p>}
+                    <p className={'noChatText'}>Puoi farmi domande su <br /> Taijiquan, Qigong, Taoismo e meditazione…</p>}
             </div>
             <div className={'chatInputWrapper'}>
                 <ChatInput onSend={(input) => callApi(input)} disabled={loading}/>
