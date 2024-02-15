@@ -30,13 +30,12 @@ const ChatMessage = ({text, from}: MessageProps) => {
         <div className={'chat'}>
             {from === Creator.Me && (
                 <div className={'userChatRight'}>
-                    <Image className={'userPic'} src={userPic} alt={'User'} width={35}/>
                     <p className={'userChatText'}>{text}</p>
                 </div>
             )}
             {from === Creator.Bot && (
                 <div className={'userChat'}>
-                    <Image className={'masterPicChat'} src={masterPic} alt={'Master'} width={40}/>
+                    {/*<Image className={'masterPicChat'} src={masterPic} alt={'Master'} width={40}/>*/}
                     <div className={'botChat'}>
                         {text.split('\n').map((line, index) => (
                             <span key={index}>
